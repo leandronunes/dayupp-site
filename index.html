@@ -1,34 +1,124 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#FFC107" />
+
+    <!-- Google Tag Manager
+         TODO: substituir pelo container GTM do Dayupp — este é só um
+         placeholder, não reaproveitar o GTM-KR6WHPH9 do Núcleo For Life. -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-XXXXXXX");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- SEO: title e description -->
     <title>Dayupp — Evolua todos os dias.</title>
     <meta
       name="description"
       content="Dayupp é o aplicativo de gestão para personal trainers avulsos — agenda, clientes, treinos, avaliações e financeiro — com um marketplace público de treinos por assinatura."
     />
+    <meta
+      name="keywords"
+      content="app para personal trainer, gestão de personal trainer, agenda de personal trainer, marketplace de treinos, assinatura de treino online, avaliação física app, ficha de treino online"
+    />
+    <meta name="author" content="Dayupp" />
+    <meta name="robots" content="index, follow" />
+    <!-- TODO: gerar em search.google.com/search-console para dayupp.com.br -->
+    <meta name="google-site-verification" content="TODO_GOOGLE_SITE_VERIFICATION" />
+    <link rel="canonical" href="https://dayupp.com.br/" />
 
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dayupp.com.br/" />
     <meta property="og:site_name" content="Dayupp" />
     <meta property="og:title" content="Dayupp — Evolua todos os dias." />
     <meta
       property="og:description"
       content="Gestão de atendimento e marketplace público de treinos por assinatura para personal trainers avulsos."
     />
-    <meta property="og:url" content="https://dayupp.com.br" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="https://dayupp.com.br/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="pt_BR" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dayupp — Evolua todos os dias." />
+    <meta
+      name="twitter:description"
+      content="Gestão de atendimento e marketplace de treinos por assinatura para personal trainers avulsos."
     />
+    <meta name="twitter:image" content="https://dayupp.com.br/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FFC107" />
+
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Dayupp",
+        "url": "https://dayupp.com.br",
+        "logo": "https://dayupp.com.br/icon-512.png",
+        "description": "Dayupp é a plataforma de gestão de atendimento e marketplace de treinos por assinatura para personal trainers avulsos."
+      }
+    </script>
+
+    <!-- JSON-LD: SoftwareApplication -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Dayupp",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://app.dayupp.com.br",
+        "description": "Agenda, clientes, treinos, avaliações e financeiro para personal trainers avulsos, com marketplace público de treinos por assinatura."
+      }
+    </script>
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Dayupp",
+        "url": "https://dayupp.com.br"
+      }
+    </script>
+
+    <!-- Poppins self-hospedado (public/fonts) — @font-face em src/index.css.
+         Preload só dos pesos críticos do hero (regular + bold);
+         500/600 carregam sob demanda conforme aparecem na página. -->
+    <link rel="preload" href="/fonts/Poppins-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Poppins-700.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

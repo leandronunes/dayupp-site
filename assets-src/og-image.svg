@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="Poppins, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="82%" cy="12%" r="60%">
+      <stop offset="0%" stop-color="#FFC107" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#FFC107" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFC107" stop-opacity="0" />
+      <stop offset="100%" stop-color="#FFC107" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#1a1a19" />
+  <rect width="1200" height="630" fill="url(#glow)" />
+
+  <polyline
+    points="0,520 140,505 260,470 340,485 430,430 540,450 620,360 720,390 800,300 900,320 1000,220 1080,250 1200,140"
+    fill="none"
+    stroke="url(#line)"
+    stroke-width="4"
+  />
+
+  <g transform="translate(96,80) scale(2.6)">
+    <g transform="translate(-92.106526,-86.330082)">
+      <path
+        fill="#FFC107"
+        d="m 95.12601,86.351089 c -0.31793,0.0065 -0.51413,0.235283 -0.51751,0.46759 l -0.0531,3.65647 c -0.007,0.456271 0.45706,0.774356 1.0021,0.772843 l 9.03624,-0.02511 c 4.88649,0.465823 7.72656,4.438041 7.69238,8.534834 -0.0342,4.096784 -3.20803,7.361674 -6.98878,8.001014 l -4.34326,0.003 0.0368,-6.30773 3.45488,0.0618 c 0.1027,-0.0179 0.82351,-0.2716 0.30727,-1.10559 l -5.52936,-5.9179 c -0.54701,-0.691338 -1.02857,-0.602718 -1.44942,-0.0075 l -5.28047,5.73935 c -0.49378,0.49771 -0.59573,1.05576 0.17355,1.23814 l 3.41336,0.0448 -0.019,10.05972 c 0.002,0.65004 0.35059,0.97338 1.01263,1.00106 l 8.50511,-0.005 c 6.11852,-0.62925 11.60404,-6.23789 11.50072,-13.240842 -0.10333,-7.002957 -5.13694,-12.137049 -11.43288,-12.969383 -3.59408,-0.03187 -7.48028,-0.02786 -10.52119,-0.0013 z"
+      />
+    </g>
+  </g>
+
+  <text x="93" y="270" font-size="88" font-weight="700" fill="#F2F2F2">Day<tspan fill="#FFC107">upp</tspan></text>
+  <text x="96" y="330" font-size="34" font-weight="500" fill="#B3B3B3">Evolua todos os dias.</text>
+  <text x="96" y="392" font-size="26" font-weight="400" fill="#8a8a86" xml:space="preserve">Gestão de atendimento e marketplace de treinos para personal trainers avulsos.</text>
+</svg>

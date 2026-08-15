@@ -2,16 +2,11 @@ import { useEffect, useRef, useState } from "react";
 
 export function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(() => !("IntersectionObserver" in window));
 
   useEffect(() => {
     const node = ref.current;
-    if (!node) return;
-
-    if (!("IntersectionObserver" in window)) {
-      setVisible(true);
-      return;
-    }
+    if (!node || !("IntersectionObserver" in window)) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
