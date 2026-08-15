@@ -33,8 +33,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#modelo" className="text-[0.88rem] text-muted-foreground hover:text-foreground">
+                <a href="#como-funciona" className="text-[0.88rem] text-muted-foreground hover:text-foreground">
                   Como funciona
+                </a>
+              </li>
+              <li>
+                <a href="#precos" className="text-[0.88rem] text-muted-foreground hover:text-foreground">
+                  Preços
                 </a>
               </li>
             </ul>
@@ -42,7 +47,7 @@ export function Footer() {
 
           <div>
             <h4 className="mb-4 text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-muted-foreground/70">
-              Para personais
+              Para personal
             </h4>
             <ul className="flex flex-col gap-2.5">
               <li>
@@ -51,8 +56,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#personais" className="text-[0.88rem] text-muted-foreground hover:text-foreground">
-                  Publicar treino
+                <a href="#personal" className="text-[0.88rem] text-muted-foreground hover:text-foreground">
+                  Como funciona pra você
                 </a>
               </li>
               <li>

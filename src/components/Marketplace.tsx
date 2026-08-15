@@ -24,21 +24,21 @@ const PROGRAMS = [
   {
     icon: IconWorkout,
     title: "Hipertrofia Avançada",
-    sub: "Lucas Personal · 12 semanas",
+    sub: "Lucas Personal · 12 semanas · 812 alunos",
     price: "R$ 49,90/mês",
     rating: "★★★★★ 4.9",
   },
   {
     icon: IconEvolution,
     title: "Core para Lombalgia",
-    sub: "Fernanda Ortiz · Contínuo",
+    sub: "Fernanda Ortiz · Contínuo · 634 alunos",
     price: "R$ 39,90/mês",
     rating: "★★★★★ 4.8",
   },
   {
     icon: IconFocus,
     title: "Mobilidade Diária",
-    sub: "Rafael Andrade · 30 dias",
+    sub: "Rafael Andrade · 30 dias · 391 alunos",
     price: "R$ 19,90/mês",
     rating: "★★★★★ 4.7",
   },
@@ -52,15 +52,15 @@ export function Marketplace() {
           <div className="flex flex-col gap-5">
             <span className="inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-primary">
               <span className="inline-block h-px w-3.5 bg-primary" />
-              Vitrine pública de treinos
+              Marketplace Dayupp
             </span>
             <h2 className="text-[1.7rem] font-bold md:text-[2.35rem]">
-              Seu treino, à venda para o Brasil inteiro — não só para quem já é seu aluno.
+              Transforme seu treino em <span className="text-primary">uma nova fonte de receita.</span>
             </h2>
             <p className="max-w-[62ch] text-[1.05rem] text-muted-foreground">
-              Publique programas por assinatura mensal em um marketplace aberto ao público, nos moldes de uma
-              vitrine de cursos. Qualquer pessoa navega, compara, avalia e assina — sem precisar te conhecer
-              antes.
+              Continue atendendo seus alunos particulares e, ao mesmo tempo, venda programas de treino para
+              qualquer pessoa através do Marketplace Dayupp — uma vitrine pública, nos moldes de uma vitrine de
+              cursos, onde qualquer pessoa navega, compara, avalia e assina sem precisar te conhecer antes.
             </p>
 
             <div className="mt-1 flex flex-col gap-3.5">
@@ -74,12 +74,18 @@ export function Marketplace() {
               ))}
             </div>
 
-            <div className="mt-1">
+            <div className="mt-1 flex flex-wrap items-center gap-3">
               <a
                 href={APP_URL}
                 className="inline-flex h-12 items-center justify-center rounded-sm bg-primary px-6 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-px hover:bg-accent"
               >
                 Publicar meu primeiro treino
+              </a>
+              <a
+                href={APP_URL}
+                className="inline-flex h-12 items-center justify-center rounded-sm border border-white/15 px-6 text-sm font-semibold text-foreground transition-colors hover:bg-white/[0.06]"
+              >
+                Conhecer marketplace
               </a>
             </div>
           </div>

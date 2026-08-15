@@ -1,37 +1,29 @@
+import { AgendaPhoneScreen } from "./AgendaPhoneScreen";
+import { PhoneFrame } from "./PhoneFrame";
 import { Reveal } from "./Reveal";
-import { IconAgenda, IconClients, IconEvolution, IconFinance, IconFocus, IconWorkout } from "./icons";
+import { IconAgenda, IconClients, IconFinance, IconWorkout } from "./icons";
 import type { ComponentType, SVGProps } from "react";
 
 const FEATURES: { icon: ComponentType<SVGProps<SVGSVGElement>>; title: string; text: string }[] = [
   {
-    icon: IconAgenda,
-    title: "Agenda inteligente",
-    text: "Horários, remarcações e lembretes automáticos para reduzir faltas e manter a semana sob controle.",
-  },
-  {
     icon: IconClients,
-    title: "Clientes e histórico",
-    text: "Ficha completa, anamnese, comorbidades e evolução de cada aluno, sempre à mão antes do atendimento.",
+    title: "Gestão de alunos",
+    text: "Histórico completo, avaliações e acompanhamento.",
   },
   {
     icon: IconWorkout,
-    title: "Prescrição de treinos",
-    text: "Monte programas por fases, com séries, cargas, descanso e vídeo — reaproveite modelos entre alunos.",
+    title: "Treinos personalizados",
+    text: "Monte, prescreva e ajuste treinos com facilidade.",
   },
   {
-    icon: IconEvolution,
-    title: "Avaliações físicas",
-    text: "Medidas, composição corporal e desempenho registrados ao longo do tempo, com evolução visual clara.",
+    icon: IconAgenda,
+    title: "Agenda inteligente",
+    text: "Organize consultas e treinos de forma prática.",
   },
   {
     icon: IconFinance,
-    title: "Financeiro",
-    text: "Pagamentos, recorrência, inadimplência e faturamento organizados sem depender de planilha.",
-  },
-  {
-    icon: IconFocus,
-    title: "Modo execução",
-    text: "Tela de treino imersiva para o aluno treinar sozinho, com séries, descanso e progresso em tempo real.",
+    title: "Financeiro simplificado",
+    text: "Controle ganhos, recebimentos e relatórios.",
   },
 ];
 
@@ -39,31 +31,45 @@ export function Features() {
   return (
     <section id="produto" className="py-22">
       <div className="mx-auto max-w-[1180px] px-6">
-        <div className="mb-12 flex max-w-[640px] flex-col gap-3.5">
-          <span className="inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-primary">
-            <span className="inline-block h-px w-3.5 bg-primary" />O aplicativo
-          </span>
-          <h2 className="text-[1.7rem] font-bold md:text-[2.35rem]">
-            Tudo o que o seu atendimento precisa, em um app só.
-          </h2>
-          <p className="max-w-[62ch] text-[1.05rem] text-muted-foreground">
-            Do primeiro contato ao acompanhamento de longo prazo: Dayupp foi pensado para o personal que atua por
-            conta própria e precisa de uma ferramenta tão organizada quanto ele.
-          </p>
-        </div>
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[auto_1fr_1fr] lg:gap-10">
+          <div className="mx-auto shrink-0 lg:mx-0">
+            <div className="relative">
+              <div
+                aria-hidden="true"
+                className="absolute -inset-8 -z-10 rounded-full opacity-70 blur-3xl"
+                style={{ background: "radial-gradient(closest-side, oklch(0.84 0.17 85 / 0.10), transparent)" }}
+              />
+              <PhoneFrame>
+                <AgendaPhoneScreen />
+              </PhoneFrame>
+            </div>
+          </div>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map((f) => (
-            <Reveal key={f.title}>
-              <div className="flex h-full flex-col gap-3.5 rounded-lg border border-border bg-card p-6.5 shadow-soft transition-all hover:-translate-y-0.5 hover:border-white/15">
-                <div className="flex size-10.5 items-center justify-center rounded-[10px] bg-primary/12 text-primary">
-                  <f.icon className="size-5.5" />
+          <Reveal className="flex flex-col gap-3.5">
+            <span className="inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-primary">
+              <span className="inline-block h-px w-3.5 bg-primary" />O aplicativo
+            </span>
+            <h2 className="text-[1.7rem] font-bold md:text-[2.2rem]">
+              Tudo o que o seu atendimento precisa, <span className="text-primary">em um app só.</span>
+            </h2>
+            <p className="max-w-[42ch] text-[1rem] text-muted-foreground">
+              Tenha mais tempo para o que realmente importa: seus alunos. O Dayupp cuida do resto.
+            </p>
+          </Reveal>
+
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            {FEATURES.map((f) => (
+              <Reveal key={f.title}>
+                <div className="flex flex-col gap-3 rounded-lg border border-border bg-card p-5 shadow-soft transition-all hover:-translate-y-0.5 hover:border-white/15">
+                  <div className="flex size-10 items-center justify-center rounded-[10px] bg-primary/12 text-primary">
+                    <f.icon className="size-5" />
+                  </div>
+                  <h3 className="text-[0.98rem] font-semibold">{f.title}</h3>
+                  <p className="text-[0.86rem] text-muted-foreground">{f.text}</p>
                 </div>
-                <h3 className="text-[1.05rem] font-semibold">{f.title}</h3>
-                <p className="text-[0.92rem] text-muted-foreground">{f.text}</p>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

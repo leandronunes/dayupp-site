@@ -26,7 +26,7 @@ const CARDS = [
 
 export function BusinessModel() {
   return (
-    <section id="modelo" className="py-22">
+    <section id="precos" className="py-22">
       <div className="mx-auto max-w-[1180px] px-6">
         <div className="mb-12 flex max-w-[640px] flex-col gap-3.5">
           <span className="inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-primary">

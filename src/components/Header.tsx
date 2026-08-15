@@ -7,8 +7,10 @@ const APP_URL = "https://app.dayupp.com.br";
 const NAV_LINKS = [
   { href: "#produto", label: "Produto" },
   { href: "#marketplace", label: "Marketplace" },
-  { href: "#personais", label: "Para personais" },
-  { href: "#modelo", label: "Como funciona" },
+  { href: "#personal", label: "Para personal" },
+  { href: "#como-funciona", label: "Como funciona" },
+  { href: "#recursos", label: "Recursos" },
+  { href: "#precos", label: "Preços" },
   { href: "#faq", label: "Perguntas" },
 ];
 
@@ -17,24 +19,24 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur-md backdrop-saturate-150">
-      <div className="mx-auto flex h-[72px] max-w-[1180px] items-center justify-between gap-6 px-6">
-        <a href="#top" onClick={() => setOpen(false)}>
+      <div className="mx-auto flex h-[72px] max-w-[1280px] items-center justify-between gap-4 px-6">
+        <a href="#top" onClick={() => setOpen(false)} className="shrink-0">
           <Logo />
         </a>
 
-        <nav aria-label="Navegação principal" className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Navegação principal" className="hidden items-center gap-5 xl:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="text-[0.86rem] font-medium whitespace-nowrap text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden shrink-0 items-center gap-3 xl:flex">
           <a
             href={APP_URL}
             className="inline-flex h-11 items-center justify-center rounded-sm border border-white/15 px-5 text-sm font-semibold text-foreground transition-colors hover:bg-white/[0.06]"
@@ -53,7 +55,7 @@ export function Header() {
           type="button"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           onClick={() => setOpen((v) => !v)}
-          className="flex size-10 items-center justify-center rounded-sm border border-white/15 text-foreground md:hidden"
+          className="flex size-10 shrink-0 items-center justify-center rounded-sm border border-white/15 text-foreground xl:hidden"
         >
           {open ? <IconClose className="size-4.5" /> : <IconMenu className="size-4.5" />}
         </button>
@@ -62,7 +64,7 @@ export function Header() {
       {open && (
         <nav
           aria-label="Navegação principal (mobile)"
-          className="flex flex-col gap-1 border-t border-border bg-background px-6 py-4 md:hidden"
+          className="flex flex-col gap-1 border-t border-border bg-background px-6 py-4 xl:hidden"
         >
           {NAV_LINKS.map((link) => (
             <a

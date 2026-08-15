@@ -2,7 +2,15 @@ import { useEffect, useRef } from "react";
 
 const DATA = [22, 25, 24, 29, 33, 31, 38, 44, 41, 48, 55, 52, 60, 68, 66, 74, 82, 80, 88, 96];
 
-export function EvolutionCanvas() {
+export function EvolutionCanvas({
+  className = "h-[220px] w-full",
+  data = DATA,
+  showGrid = true,
+}: {
+  className?: string;
+  data?: number[];
+  showGrid?: boolean;
+}) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -15,19 +23,21 @@ export function EvolutionCanvas() {
     function draw(w: number, h: number) {
       ctx!.clearRect(0, 0, w, h);
       const pad = 8;
-      const max = Math.max(...DATA);
-      const min = Math.min(...DATA);
-      const step = (w - pad * 2) / (DATA.length - 1);
+      const max = Math.max(...data);
+      const min = Math.min(...data);
+      const step = (w - pad * 2) / (data.length - 1);
       const py = (v: number) => h - pad - ((v - min) / (max - min)) * (h - pad * 2);
 
-      ctx!.strokeStyle = "oklch(1 0 0 / 6%)";
-      ctx!.lineWidth = 1;
-      for (let g = 0; g < 4; g++) {
-        const gy = pad + (g / 3) * (h - pad * 2);
-        ctx!.beginPath();
-        ctx!.moveTo(0, gy);
-        ctx!.lineTo(w, gy);
-        ctx!.stroke();
+      if (showGrid) {
+        ctx!.strokeStyle = "oklch(1 0 0 / 6%)";
+        ctx!.lineWidth = 1;
+        for (let g = 0; g < 4; g++) {
+          const gy = pad + (g / 3) * (h - pad * 2);
+          ctx!.beginPath();
+          ctx!.moveTo(0, gy);
+          ctx!.lineTo(w, gy);
+          ctx!.stroke();
+        }
       }
 
       const grad = ctx!.createLinearGradient(0, 0, 0, h);
@@ -35,25 +45,25 @@ export function EvolutionCanvas() {
       grad.addColorStop(1, "oklch(0.84 0.17 85 / 0)");
 
       ctx!.beginPath();
-      ctx!.moveTo(pad, py(DATA[0]));
-      for (let i = 1; i < DATA.length; i++) ctx!.lineTo(pad + i * step, py(DATA[i]));
-      ctx!.lineTo(pad + (DATA.length - 1) * step, h);
+      ctx!.moveTo(pad, py(data[0]));
+      for (let i = 1; i < data.length; i++) ctx!.lineTo(pad + i * step, py(data[i]));
+      ctx!.lineTo(pad + (data.length - 1) * step, h);
       ctx!.lineTo(pad, h);
       ctx!.closePath();
       ctx!.fillStyle = grad;
       ctx!.fill();
 
       ctx!.beginPath();
-      ctx!.moveTo(pad, py(DATA[0]));
-      for (let j = 1; j < DATA.length; j++) ctx!.lineTo(pad + j * step, py(DATA[j]));
+      ctx!.moveTo(pad, py(data[0]));
+      for (let j = 1; j < data.length; j++) ctx!.lineTo(pad + j * step, py(data[j]));
       ctx!.strokeStyle = "oklch(0.84 0.17 85)";
       ctx!.lineWidth = 2.5;
       ctx!.lineJoin = "round";
       ctx!.lineCap = "round";
       ctx!.stroke();
 
-      const lastX = pad + (DATA.length - 1) * step;
-      const lastY = py(DATA[DATA.length - 1]);
+      const lastX = pad + (data.length - 1) * step;
+      const lastY = py(data[data.length - 1]);
       ctx!.beginPath();
       ctx!.arc(lastX, lastY, 4.5, 0, Math.PI * 2);
       ctx!.fillStyle = "oklch(0.84 0.17 85)";
@@ -76,7 +86,7 @@ export function EvolutionCanvas() {
     resize();
     window.addEventListener("resize", resize);
     return () => window.removeEventListener("resize", resize);
-  }, []);
+  }, [data, showGrid]);
 
-  return <canvas ref={canvasRef} aria-hidden="true" className="block h-[220px] w-full" />;
+  return <canvas ref={canvasRef} aria-hidden="true" className={`block ${className}`} />;
 }
