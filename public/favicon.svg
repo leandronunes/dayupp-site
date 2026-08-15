@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="24.975061mm"
+   height="26.237799mm"
+   viewBox="0 0 24.975061 26.237799"
+   version="1.1"
+   id="svg3225"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="logo_dayup.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview3227"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.7500982"
+     inkscape:cx="1.3331588"
+     inkscape:cy="236.63568"
+     inkscape:window-width="1854"
+     inkscape:window-height="1011"
+     inkscape:window-x="66"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs3222" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-92.106526,-86.330082)">
+    <path
+       style="fill:#fcb505;fill-opacity:1;stroke-width:0.264583"
+       d="m 95.12601,86.351089 c -0.31793,0.0065 -0.51413,0.235283 -0.51751,0.46759 l -0.0531,3.65647 c -0.007,0.456271 0.45706,0.774356 1.0021,0.772843 l 9.03624,-0.02511 c 4.88649,0.465823 7.72656,4.438041 7.69238,8.534834 -0.0342,4.096784 -3.20803,7.361674 -6.98878,8.001014 l -4.34326,0.003 0.0368,-6.30773 3.45488,0.0618 c 0.1027,-0.0179 0.82351,-0.2716 0.30727,-1.10559 l -5.52936,-5.9179 c -0.54701,-0.691338 -1.02857,-0.602718 -1.44942,-0.0075 l -5.28047,5.73935 c -0.49378,0.49771 -0.59573,1.05576 0.17355,1.23814 l 3.41336,0.0448 -0.019,10.05972 c 0.002,0.65004 0.35059,0.97338 1.01263,1.00106 l 8.50511,-0.005 c 6.11852,-0.62925 11.60404,-6.23789 11.50072,-13.240842 -0.10333,-7.002957 -5.13694,-12.137049 -11.43288,-12.969383 -3.59408,-0.03187 -7.48028,-0.02786 -10.52119,-0.0013 z"
+       id="path447"
+       sodipodi:nodetypes="csssczccccccccccccczccc"
+       inkscape:transform-center-x="-147.0603" />
+  </g>
+</svg>
